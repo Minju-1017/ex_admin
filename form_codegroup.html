@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 외부 라이브러리 사용: Bootstrap 포함 시키기 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <style>
+        body {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .title_left {
+            padding: 15px 20px;
+            font-size: 25px; 
+            color: rgb(83, 83, 83); 
+            font-weight: 400;
+        }
+        .title_right {
+            padding: 15px 20px;
+            text-align: right;
+        }
+        .title_sub {
+            padding: 30px 40px 15px 40px;
+            background-color: rgb(248, 245, 245);
+        }
+        .title_sub1 {
+            padding: 15px 20px;
+            font-size: 20px;
+            color: rgb(83, 83, 83); 
+            font-weight: bold;
+            background-color: rgb(248, 245, 245);
+        }
+        .breadcrumb {
+            font-size: 13px;  
+            font-weight: bold;  
+        }
+        .nav-item, .dropdown-item {
+            font-size: 14px; 
+            color: rgb(83, 83, 83);    
+        }
+        .nav-link > img {
+            padding-right: 10px;
+        }
+        .content_blank {
+            background-color: rgb(248, 245, 245);    
+        }
+        .form_area, .form-select, .form-control {
+            font-size: 13px; 
+            color: rgb(83, 83, 83);   
+            font-weight: bold;
+        }
+        table {
+            border-top: 1px solid; 
+            font-size: 13px; 
+            color: rgb(83, 83, 83);
+        }
+        tr {
+            height: 50px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        th > a {
+            text-decoration: none;
+            color: #000;
+            vertical-align: middle;
+        }
+        .form_area > .row {
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <form>
+            <div class="row" style="border-bottom: 1px solid lightgray;">
+                <div class="col title_left">
+                    Admin
+                </div>
+                <div class="col title_right">
+                    <a href="#"><img src="./image/light_icon.png"></a>&nbsp;&nbsp;
+                    <a href="#"><img src="./image/grid_icon.png"></a>&nbsp;&nbsp;
+                    <a href="#"><img src="./image/profile_icon.png"></a>
+                </div>
+            </div>
+            <!-- <div class="row" style="height: 90vh;"> -->
+            <div class="row">
+                <div class="col" style="border-right: 1px solid lightgray;">
+                    <nav class="navbar flex-column">
+                        <div class="navbar-nav w-100">
+                            <div class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">
+                                    <img src="./image/menu_icon_1.png">Home
+                                </a>
+                            </div>
+                            <div class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="./image/menu_icon_2.png">공지사항
+                                </a>
+                            </div>
+                            <div class="nav-item">
+                                <a class="nav-link" href="./form_code.html">
+                                    <img src="./image/menu_icon_3.png">회원관리
+                                </a>
+                            </div>
+                            <div class="nav-item">
+                                <a class="nav-link" href="./form_codegroup.html">
+                                    <img src="./image/menu_icon_4.png">서비스관리
+                                </a>
+                            </div>
+                            <div class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="./image/menu_icon_5.png">커뮤니케이션
+                                </a>
+                            </div>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                                    <img src="./image/menu_icon_6.png">시스템관리
+                                </a>
+                                <ul class="dropdown-menu bg-transparent border-0">
+                                    <li><a class="dropdown-item" href="./list_code.html">코드관리</a></li>
+                                    <li><a class="dropdown-item" href="./list_codegroup.html">코드그룹관리</a></li>    
+                                </ul>
+                            </div>
+                            <div class="nav-item">
+                                <a class="nav-link" href="./form.html">
+                                    <img src="./image/menu_icon_7.png">개인정보관리
+                                </a>
+                            </div>
+                            <div class="nav-item">
+                                <a class="nav-link" href="./login.html">
+                                    <img src="./image/menu_icon_8.png">test
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-10">
+                    <div class="row" style="background-color: rgb(248, 245, 245);">
+                        <div class="col title_sub">
+                            <div class="row">
+                                <div class="col">
+                                    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="#">Page 1</a></li>
+                                            <li class="breadcrumb-item"><a href="#">Page 2</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Default</li>
+                                        </ol>
+                                    </nav>
+                                </div>    
+                            </div>
+                            <div class="row">
+                                <div class="col" style="font-size: 32px; font-weight: bold;">
+                                    Code Group
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="content_blank" style="width:40px;"></div>
+                        <div class="col title_sub1" style="border: 1px solid lightgray;">
+                            기본 정보
+                        </div>
+                        <div class="content_blank" style="width:40px;"></div>
+                    </div>
+                    <form>
+                        <div class="row">
+                            <div class="content_blank" style="width:40px;"></div>
+                            <div class="col form_area" style="border-top: 0; border-bottom: 1px; border-left: 1px; border-right: 1px; border-color: lightgray; border-style: solid; padding: 15px 20px;">                               
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="form-label">
+                                            코드그룹 코드 <span style="color: red; font-weight: 500;">*</span>
+                                        </label> 
+                                        <input class="form-control" disabled placeholder="자동생성">
+                                    </div> 
+                                    <div class="col">
+                                        <label class="form-label">코드그룹 코드 (ANOTHER)</label> 
+                                        <input class="form-control" placeholder="영대소문자, 숫자">
+                                    </div>
+                                    <div class="col">
+                                        <label class="form-label">
+                                            코드그룹 이름 <span style="color: red; font-weight: 500;">*</span>
+                                        </label> 
+                                        <input class="form-control" placeholder="한글, 영대소문자, 숫자">
+                                    </div> 
+                                    <div class="col">
+                                        <label class="form-label">코드그룹 이름 (영문)</label> 
+                                        <input class="form-control" placeholder="영대소문자, 숫자">
+                                    </div>   
+                                </div>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <label for="usegroup" class="form-label">
+                                            사용여부 <span style="color: red; font-weight: 500;">*</span>
+                                        </label>    
+                                        <select class="form-select" id="usegroup" required>
+                                            <option selected value="">사용</option>
+                                            <option>미사용</option>
+                                        </select>
+                                    </div> 
+                                    <div class="col">
+                                        <label class="form-label">순서 <span style="color: red; font-weight: 500;">*</span></label> 
+                                        <input class="form-control">
+                                    </div>  
+                                    <div class="col-6"></div>    
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label class="form-label">설명</label> 
+                                        <div class="input-group">
+                                            <textarea class="form-control" aria-label="With textarea" rows="5"></textarea>
+                                        </div>
+                                    </div> 
+                                    <div class="col-6"></div>     
+                                </div>
+                                <div class="row">
+                                    <div class="col"><a href="#"><img src="./image/bottom_icon1.png"></a></div>
+                                    <div class="col" style="text-align: right;"><a href="#"><img src="./image/bottom_icon2.png"></a></div>    
+                                </div>
+                            </div>
+                            <div class="content_blank" style="width:40px;"></div> 
+                        </div>  
+                    </form>
+                    <div class="row content_blank" style="height: 220px;"></div>
+                </div>
+            </div>
+            <div class="row" style="height: 60px;">
+                <div class="col-2" style="border-top: 1px solid lightgray; border-right: 1px solid lightgray; padding: 20px 20px;">
+                    <a href="#"><img src="./image/collspan_icon.png"></a>
+                </div>
+                <div class="col-10 content_blank" style="border-top: 1px solid lightgray; padding: 20px 20px;">
+                    Thank you for creating with Phoenix | 2023 ⓒ <span style="color: rgb(37, 72, 229);">Themewagon</span> 
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <!-- 외부 라이브러리 사용: Bootstrap 포함 시키기 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
